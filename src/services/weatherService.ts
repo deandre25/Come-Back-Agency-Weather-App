@@ -1,8 +1,8 @@
 import axios from 'axios';
 import { City } from '../types/types';
 
-export const WEATHER_API_KEY = '2b1732bf85f0be6a3d73f190e15333cd';
-export const WEATHER_API_URL = 'https://api.openweathermap.org/data/2.5'
+export const WEATHER_API_KEY = process.env.REACT_APP_WEATHER_API_KEY;
+export const WEATHER_API_URL = process.env.REACT_APP_WEATHER_API_URL;
 
 export const fetchHourlyForecast = async (id?: string): Promise<any[]> => {
   try {
